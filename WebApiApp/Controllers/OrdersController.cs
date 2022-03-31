@@ -92,30 +92,7 @@ namespace WebApiApp.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateOrder(int id,[FromBody] Order order)
         {
-            /*if (order is null)
-            {
-                _logger.LogError("Orner object sent from client is null.");
-                return BadRequest("Orner object is null");
-            }
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid orner object sent from client.");
-                return BadRequest("Invalid model object");
-            }
-            if (order.Id != null)
-            {
-                _orderRepository.Update(order);
-                return Ok(order);
-            }
-            
-            else
-            {
-                _orderRepository.Save(order);
-                _logger.LogError($"Orner with id hasn't been found in db.");
-                return Ok("Order Created");
-            }
-
-            return NoContent();*/
+           
             if (order == null)
             {
                 return BadRequest("Customer is null");
